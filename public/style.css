@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1 {
+  font-size: 144px;
+  font-family: 'Long Cang';
+  color: #FFF613;
+}
+
+h2 {
+  font-family: 'Noto Sans SC';
+  font-weight: 500;
+}
+
+h3 {
+  font-family: 'Noto Sans SC';
+  font-weight: 400;
+}
+
+#hero {
+  background: url(/images/hero_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#hero-text-wrapper {
+  position: relative;
+}
+
+#hero-text {
+  width: 400px;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#hero-text > h2 {
+  margin-top: 25px;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+#hero-form {
+  position: relative;
+}
+
+form {
+  background: #FFFFFF;
+  width: 400px;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#form-title {
+  font-size: 18px;
+  color: #333232;
+  background: #F4F5F0;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-bottom: 1px solid #dfdfd7;
+}
+
+#form-body {
+  padding: 10px;
+}
+
+#amount-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+  margin-bottom: 20px;
+}
+
+.amount-button {
+  background-color: #E9EAE4;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #dfdfd7;
+}
+
+.amount-button > h3 {
+  color: #9b9b94;
+  font-size: 15px;
+}
+
+#amount-other {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#temple-selection {
+  font-size: 18px;
+  color: #333232;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #dfdfd7;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  background-color: #FFFFFF;
+}
+
+#donate-button {
+  font-size: 20px;
+  width: 100%;
+  height: 60px;
+  background-color: #cf1b1b;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+}

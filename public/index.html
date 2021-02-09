@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Yong Peng Temple Donations</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <section id="hero">
+        <div id="hero-text-wrapper">
+          <div id="hero-text">
+            <h1>永平</h1>
+            <h2>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中</h2>
+          </div>
+        </div>
+        <div id="hero-form">
+          <form>
+            <h3 id="form-title">选择要给的数量</h3>
+            <div id="form-body">
+              <div id="amount-wrapper">
+                <a class="amount-button"><h3>RM 10</h3></a>
+                <a class="amount-button"><h3>RM 25</h3></a>
+                <a class="amount-button"><h3>RM 50</h3></a>
+                <a class="amount-button"><h3>RM 100</h3></a>
+                <a class="amount-button" id="amount-other"><h3>Other Amount</h3></a>
+              </div>
+              <select name="temple" id="temple-selection">
+                <option value="temple"><h3>Temple A</h3></option>
+                <option value="temple"><h3>Temple B</h3></option>
+                <option value="temple"><h3>Temple C</h3></option>
+                <option value="temple"><h3>Temple D</h3></option>
+              </select>
+              <button id="donate-button"><h3>捐赠</h3></button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="app.js"></script>
+  </body>
+</html> 
