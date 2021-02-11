@@ -18,25 +18,30 @@
           </div>
         </div>
         <div id="hero-form">
-          <form>
+          <div id="form">
             <h3 id="form-title">选择要给的数量</h3>
             <div id="form-body">
+              <h3 id="text-invalid"></h3>
               <div id="amount-wrapper">
-                <a class="amount-button"><h3>RM 10</h3></a>
-                <a class="amount-button"><h3>RM 25</h3></a>
-                <a class="amount-button"><h3>RM 50</h3></a>
-                <a class="amount-button"><h3>RM 100</h3></a>
-                <a class="amount-button" id="amount-other"><h3>Other Amount</h3></a>
+                <a class="amount-button" id="amount-10" onclick="uiController.amountSet(10)"><h3>RM 10</h3></a>
+                <a class="amount-button" id="amount-25" onclick="uiController.amountSet(25)"><h3>RM 25</h3></a>
+                <a class="amount-button" id="amount-50" onclick="uiController.amountSet(50)"><h3>RM 50</h3></a>
+                <a class="amount-button" id="amount-100" onclick="uiController.amountSet(100)"><h3>RM 100</h3></a>
+                <a class="amount-button" id="amount-other" onclick="uiController.amountSet('other')"><h3>Other Amount</h3></a>
+                <a class="amount-button" id="amount-value">
+                  <h3>RM</h3>
+                  <input id="amount-text" type="number" oninput="uiController.validateForm()" placeholder="Other Amount">
+                </a>
               </div>
               <select name="temple" id="temple-selection">
-                <option value="temple"><h3>Temple A</h3></option>
-                <option value="temple"><h3>Temple B</h3></option>
-                <option value="temple"><h3>Temple C</h3></option>
-                <option value="temple"><h3>Temple D</h3></option>
+                <option value="temple-a"><h3>Temple A</h3></option>
+                <option value="temple-b"><h3>Temple B</h3></option>
+                <option value="temple-c"><h3>Temple C</h3></option>
+                <option value="temple-d"><h3>Temple D</h3></option>
               </select>
               <button id="donate-button"><h3>捐赠</h3></button>
             </div>
-          </form>
+          </div>
         </div>
       </section>
     </div>
