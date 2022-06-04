@@ -100,4 +100,17 @@
     display: block;
   }
 
+  #story-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #story-content-wrapper {
+    padding: 20px 50px;
+  }
+
+  #story-donate {
+    margin-top: 50px;
+  }
 }
