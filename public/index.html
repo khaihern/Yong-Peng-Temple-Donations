@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Yong Peng Temple Donations</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/hero_section.css" rel="stylesheet" type="text/css" />
+    <link href="css/locations_section.css" rel="stylesheet" type="text/css" />
+    <link href="css/story_section.css" rel="stylesheet" type="text/css" />
+    <link href="css/media_query.css" rel="stylesheet" type="text/css" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Sans+SC:wght@400;500&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
   </head>
@@ -51,36 +57,69 @@
       <section id="locations">
         <h1 id="locations-title">永平寺庙</h1>
         <iframe id="mobile-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d343421.3155680385!2d102.94632567036074!3d2.0149268779390317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d0441e5d763425%3A0xc4459f3e1cf18f23!2sYong%20Peng%2C%20Johor%2C%20Malaysia!5e0!3m2!1sen!2sus!4v1613161168823!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <div id="locations-content">
-          <div id="locations-content-cards">
-            <div class="temple-cards">
-              <div class="temple-cards-labels">
-                <h3 class="temple-cards-labels-txt">天后宫</h3>
-                <button class="temple-cards-labels-btn">捐赠</button>
+        <div id="locations-content-wrapper">
+          <div id="locations-content">
+            <div id="locations-content-cards">
+              <div class="temple-cards">
+                <div class="temple-cards-labels">
+                  <h3 class="temple-cards-labels-txt">天后宫</h3>
+                  <button class="temple-cards-labels-btn">捐赠</button>
+                </div>
+              </div>
+              <div class="temple-cards" id="ad-card">
+                <h1 id="ad-card-txt">新年<br>快乐</h1>
+              </div>
+              <div class="temple-cards">
+                <div class="temple-cards-labels">
+                  <h3 class="temple-cards-labels-txt">天后宫</h3>
+                  <button class="temple-cards-labels-btn">捐赠</button>
+                </div>
+              </div>
+              <div class="temple-cards">
+                <div class="temple-cards-labels">
+                  <h3 class="temple-cards-labels-txt">天后宫</h3>
+                  <button class="temple-cards-labels-btn">捐赠</button>
+                </div>
               </div>
             </div>
-            <div class="temple-cards" id="ad-card">
-              <h1 id="ad-card-txt">新年<br>快乐</h1>
-            </div>
-            <div class="temple-cards">
-              <div class="temple-cards-labels">
-                <h3 class="temple-cards-labels-txt">天后宫</h3>
-                <button class="temple-cards-labels-btn">捐赠</button>
-              </div>
-            </div>
-            <div class="temple-cards">
-              <div class="temple-cards-labels">
-                <h3 class="temple-cards-labels-txt">天后宫</h3>
-                <button class="temple-cards-labels-btn">捐赠</button>
-              </div>
+            <div id="locations-content-map">
+              <iframe id="desktop-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d343421.3155680385!2d102.94632567036074!3d2.0149268779390317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d0441e5d763425%3A0xc4459f3e1cf18f23!2sYong%20Peng%2C%20Johor%2C%20Malaysia!5e0!3m2!1sen!2sus!4v1613161168823!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"  tabindex="0"></iframe>
             </div>
           </div>
-          <div id="locations-content-map">
-            <iframe id="desktop-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d510363.7836947567!2d103.0606843!3d2.0690766!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d0441e5d763425%3A0xc4459f3e1cf18f23!2sYong%20Peng%2C%20Johor%2C%20Malaysia!5e0!3m2!1sen!2sus!4v1613081647025!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </section>
+
+      <section id="story">
+        <div id="story-content-wrapper">
+          <div id="story-content">
+            <div id="story-article">
+              <h2 id="story-title">故事</h2>
+              <div id="story-image"></div>
+              <div id="story-text">
+                <h3>华人农历新年是一家团聚的时光，在外打拼的游子都会珍惜在这佳节里回来熟悉的家乡，与我们的父母；兄弟姐妹；亲朋戚友读过以你啊你度的农历新年。很多时候，我们都回到我们熟悉的寺庙，乞求神明菩萨保佑我们的父母，希望家人都能度过一个平安健康的一年。<br><br>但是因为新冠病毒横行，一切都变得不一样，永平的父母家人们都只能度过一个没有“你和我在场”的团圆饭。当然，我们也没机会到我们熟悉的寺庙为他们和我们乞求祝福。<span id="story-more"><br><br>在远方的我看到家乡的寺庙，因为疫情而不能开放给信徒们而失去善信们所给予的添油善缘，而可能会度过一个艰难的一年。而盟起了帮助大家添油和希望神明也暸解我们的一片善心，希望在来年的相聚，他家一切都安康。<br><br>在凑积了善款后，我们将会把善款和名单交给寺庙扶着人。负责人也会把名单放在显眼的位置，方便日后查寻。</span></h3>
+                <div id="story-gradient"></div>
+              </div>
+              <u><h3 onclick="uiController.readMore()" id="story-btn">阅读更多</h3></u>
+            </div>
+            <div id="story-donate-wrapper">
+              <div id="story-donate">
+                <h2><span id="total-donated-amount">RM 540</span> 募集</h2>
+                <a href="#hero"><button id="donate-button"><h3>捐赠</h3></button></a>
+                <hr>
+                <div id="people-donated">
+                  <img src="">
+                  <h3 id="people-donated-txt">已有<span id="people-donated-num">127</span>人捐赠了</h3>
+                </div>
+                <h3 id="share">分享</h3>
+                <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fyong-peng-temple-donations--khai_hernhern.repl.co%2F&layout=button_count&size=large&width=87&height=28&appId" width="87" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="帮助捐赠给您的永平寺庙与教会" data-url="https://yong-peng-temple-donations--khai_hernhern.repl.co/" data-show-count="false">Tweet</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <script src="app.js"></script>
   </body>

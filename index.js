@@ -11,6 +11,36 @@ app.use(express.json());
 app.use(express.static('public'));
 const DOMAIN = 'https://yong-peng-temple-donations--khai_hernhern.repl.co';
 
+app.get('/donation-data', async (req, res) => {
+  try {
+    const balance = await stripe.balance.retrieve();
+    const customers = await stripe.customers.list();
+    const charges = await stripe.charges.list();
+    charges.data.map((item) => {
+      console.log(item.billing_details.name);
+    });
+
+    // SEND RESPONSE
+    res.status(200).json({
+        status: 'success',
+        data: {
+          balance: balance.pending[0].amount,
+          people: charges.data.length
+        }
+      });
+  } catch (err) {
+    res.status(404).json({
+        status: 'fail',
+        message: err
+      });
+  }
+});
+
+app.get('/get-balance', async (req, res) => { 
+  const balance = await stripe.balance.retrieve();
+  console.log(balance.pending[0].amount);
+}); 
+
 app.post('/create-session', async (req, res) => {
   const data = req.body;
   console.log(data)
@@ -36,10 +66,7 @@ app.post('/create-session', async (req, res) => {
 stripe.balanceTransactions.list(function(err, balanceTransactions) {
   console.log(balanceTransactions)
 });
-
-stripe.balance.retrieve(function(err, balance) {
-  console.log(balance);
-});
 */
+
 
 app.listen(4242, () => console.log('Running on port 4242'));

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-weight: 400;
+  font-family: 'Long Cang';
+  color: #FFF613;
+}
+
+h2 {
+  font-family: 'Noto Sans SC';
+  font-weight: 500;
+}
+
+h3 {
+  font-family: 'Noto Sans SC';
+  font-weight: 400;
+}

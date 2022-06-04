@@ -52,6 +52,12 @@ var stripeController = (function() {
       .catch((error) => {
         console.error('Error:', error);
       });
+    },
+
+    getDonationData: async function() {
+      var response = await fetch('/donation-data', { method: 'GET' });
+      var result = await response.json();
+      return result.data;
     }
   }
 })();
@@ -65,7 +71,12 @@ var uiController = (function() {
     amountOther: '#amount-other',
     amountValue: '#amount-value',
     amountText: '#amount-text',
-    textInvalid: '#text-invalid'
+    textInvalid: '#text-invalid',
+    storyMore: '#story-more',
+    storyGradient: '#story-gradient',
+    storyBtn: '#story-btn',
+    totalDonatedAmount: '#total-donated-amount',
+    peopleDonatedNum: '#people-donated-num'
   };
 
   var donateAmount = 25;
@@ -127,6 +138,26 @@ var uiController = (function() {
       console.log(donateAmount);
     },  
 
+    readMore: function() {
+      var storyBtn = document.querySelector(DOMstrings.storyBtn);
+      var storyMore = document.querySelector(DOMstrings.storyMore);
+      var storyGradient = document.querySelector(DOMstrings.storyGradient);
+      if (storyBtn.innerHTML === '阅读更多' || storyBtn.innerHTML === 'Read More') {
+        storyBtn.innerHTML = '阅读更少'; 
+        storyMore.style.display = 'inline';
+        storyGradient.style.display = 'none'
+      } else {
+        storyBtn.innerHTML = '阅读更多'; 
+        storyMore.style.display = 'none';
+        storyGradient.style.display = 'block'
+      }
+    },
+
+    updateDonationData: function(data) {
+      document.querySelector(DOMstrings.totalDonatedAmount).innerHTML = 'RM ' + data.balance / 100;
+      document.querySelector(DOMstrings.peopleDonatedNum).innerHTML = data.people;
+    },
+
     getDOMstrings: function() {
       return DOMstrings
     }
@@ -154,11 +185,22 @@ var controller = (function(stripeCtrl, uiCtrl) {
     stripeCtrl.checkout(input);
   };
 
+  var loadStripeData = async function() {
+    var donationData = await stripeCtrl.getDonationData();
+    console.log(donationData);
+    uiCtrl.updateDonationData(donationData);
+  }
+  /*
+  var loadStripeData = function() {
+    stripeCtrl.
+  };
+  */
   return {
     init: function() {
       console.log('started');
       document.querySelector(`#amount-25`).classList.add('selected');
       setupEventListeners();
+      loadStripeData();
     }
   }
 })(stripeController, uiController);
