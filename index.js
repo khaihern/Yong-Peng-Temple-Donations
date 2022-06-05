@@ -9,7 +9,7 @@ const stripe = Stripe(process.env.STRIPE_SK);
 const app = express();
 app.use(express.json());
 app.use(express.static('public'));
-const DOMAIN = 'https://yong-peng-temple-donations--khai_hernhern.repl.co';
+const DOMAIN = 'https://yong-peng-temple.herokuapp.com/';
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
