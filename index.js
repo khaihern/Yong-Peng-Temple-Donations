@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(express.static('public'));
 const DOMAIN = 'https://yong-peng-temple-donations--khai_hernhern.repl.co';
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+})
+
 app.post('/create-session', async (req, res) => {
   const data = req.body;
   console.log(data)
@@ -42,4 +46,4 @@ stripe.balance.retrieve(function(err, balance) {
 });
 */
 
-app.listen(4242, () => console.log('Running on port 4242'));
+app.listen(process.env.PORT || 4242, () => console.log('Running on port 4242'));
